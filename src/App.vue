@@ -37,4 +37,10 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.navbar-link {
+  &.router-link-exact-active {
+    color: #5247e7 
+  }
+}
+</style>
