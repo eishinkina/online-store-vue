@@ -5,7 +5,8 @@ Vue.use(Router);
 
 //pages
 import Home from "./components/pages/Home.vue";
-import Example from "././components/pages/Example.vue";
+import Example from "./components/pages/Example.vue";
+import NotFound from "./components/pages/404.vue"
 
 //routering
 export default new Router({
@@ -19,6 +20,11 @@ export default new Router({
       path: "/example",
       name: "example",
       component: Example,
+    },
+    {
+      path: "*",
+      name: "notfound",
+      component: NotFound,
     },
   ],
 });
