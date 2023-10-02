@@ -15,7 +15,6 @@
                 <img :src="slide.img" :alt="slide.name" />
               </slide>
             </carousel>
-            <!-- <img :src="product.img" :alt="product.title" /> -->
           </div>
           <!-- content  -->
           <div class="product-content">
@@ -36,10 +35,8 @@ export default {
     };
   },
   created() {
-    // console.log({ route: this.$route, id: this.$route.params.id });
     let id = this.$route.params.id;
     this.product = this.$store.getters.getProduct(id);
-    // console.log(product)
   },
 };
 </script>
@@ -54,5 +51,10 @@ export default {
 .product-content {
   max-width: 48%;
   text-align: center;
+}
+.VueCarousel-inner {
+  visibility: visible !important;
+  flex-basis: 100% !important;
+  width: 100% !important;
 }
 </style>
